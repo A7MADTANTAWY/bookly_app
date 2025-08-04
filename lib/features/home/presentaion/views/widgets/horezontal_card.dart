@@ -7,7 +7,7 @@ class HorezontalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2 / 3.4,
+      aspectRatio: 2 / 3.25,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),

@@ -21,6 +21,15 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
           ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 13, top: 13),
+              child: Text(
+                "Best Seller",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+              ),
+            ),
+          ),
         ],
       ),
     );

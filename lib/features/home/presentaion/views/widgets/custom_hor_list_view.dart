@@ -9,7 +9,7 @@ class CustomHorListView extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.only(right: 8),
+          padding: const EdgeInsets.only(right: 10),
           child: HorezontalCard(),
         );
       },
