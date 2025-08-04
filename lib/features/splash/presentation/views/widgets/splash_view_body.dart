@@ -34,7 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         ),
         const Text(
           'Welcome to Bookly',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
         const Text(
           'Read Free Books',
