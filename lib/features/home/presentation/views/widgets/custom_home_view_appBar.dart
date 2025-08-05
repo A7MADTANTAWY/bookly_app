@@ -1,6 +1,9 @@
 import 'package:bokly_app/constants.dart';
 import 'package:bokly_app/core/utils/assets.dart';
+import 'package:bokly_app/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class CustomSliverAppBar extends StatelessWidget {
   const CustomSliverAppBar({super.key});
@@ -16,7 +19,16 @@ class CustomSliverAppBar extends StatelessWidget {
       snap: false,
       automaticallyImplyLeading: false,
       actions: [
-        IconButton(icon: const Icon(Icons.search, size: 35), onPressed: () {}),
+        IconButton(
+          icon: const Icon(Icons.search, size: 35),
+          onPressed: () {
+            Get.to(
+              () => const SearchView(),
+              transition: Transition.fade,
+              duration: Duration(milliseconds: 250),
+            );
+          },
+        ),
       ],
     );
   }

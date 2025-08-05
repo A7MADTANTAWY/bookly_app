@@ -1,10 +1,7 @@
-
 import 'package:bokly_app/core/utils/assets.dart';
 import 'package:bokly_app/features/home/presentation/views/book_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
 class VerticalCard extends StatelessWidget {
   const VerticalCard({super.key});
@@ -26,13 +23,11 @@ class VerticalCard extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width * 0.29,
               height: MediaQuery.of(context).size.height * 0.19,
-
               decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage(AssetsData.testImage),
                 ),
-
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -60,7 +55,6 @@ class VerticalCard extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
-
                   SizedBox(height: 10),
                   Row(
                     children: [

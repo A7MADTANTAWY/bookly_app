@@ -35,7 +35,6 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
           ),
-
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) =>

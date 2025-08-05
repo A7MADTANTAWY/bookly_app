@@ -15,7 +15,6 @@ class CustomHorListView extends StatelessWidget {
         if (index == 0) {
           return SizedBox(width: widthOfSizedBbox); // أول عنصر فراغ
         }
-
         return Padding(
           padding: const EdgeInsets.only(right: 10),
           child: HorizontalCard(),
