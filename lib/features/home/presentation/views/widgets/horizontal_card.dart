@@ -1,8 +1,8 @@
 import 'package:bokly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-class HorezontalCard extends StatelessWidget {
-  const HorezontalCard({super.key});
+class HorizontalCard extends StatelessWidget {
+  const HorizontalCard({super.key});
 
   @override
   Widget build(BuildContext context) {

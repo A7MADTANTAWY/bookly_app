@@ -1,5 +1,5 @@
 import 'package:bokly_app/core/utils/assets.dart';
-import 'package:bokly_app/features/home/presentaion/views/home.dart';
+import 'package:bokly_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 

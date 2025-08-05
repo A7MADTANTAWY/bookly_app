@@ -1,4 +1,4 @@
-import 'package:bokly_app/features/home/presentaion/views/widgets/home_view_body.dart';
+import 'package:bokly_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
