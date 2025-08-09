@@ -13,7 +13,7 @@ class CustomHorListView extends StatelessWidget {
       itemCount: 11, // 10 cards + 1 spacer
       itemBuilder: (context, index) {
         if (index == 0) {
-          return SizedBox(width: widthOfSizedBbox); // أول عنصر فراغ
+          return SizedBox(width: widthOfSizedBbox); 
         }
         return Padding(
           padding: const EdgeInsets.only(right: 10),
