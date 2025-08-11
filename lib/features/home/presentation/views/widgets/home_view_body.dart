@@ -1,7 +1,6 @@
 import 'package:bokly_app/features/home/presentation/views/widgets/custom_home_view_appBar.dart';
 import 'package:bokly_app/features/home/presentation/views/widgets/custom_hor_list_view.dart';
 import 'package:bokly_app/features/home/presentation/views/widgets/custom_ver_list_view.dart';
-import 'package:bokly_app/features/home/presentation/views/widgets/vertical_cards.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
