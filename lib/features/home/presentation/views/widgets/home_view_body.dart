@@ -1,5 +1,6 @@
 import 'package:bokly_app/features/home/presentation/views/widgets/custom_home_view_appBar.dart';
 import 'package:bokly_app/features/home/presentation/views/widgets/custom_hor_list_view.dart';
+import 'package:bokly_app/features/home/presentation/views/widgets/custom_ver_list_view.dart';
 import 'package:bokly_app/features/home/presentation/views/widgets/vertical_cards.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -19,10 +20,7 @@ class HomeViewBody extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: SizedBox(
                 height: MediaQuery.of(context).size.height * 0.27,
-                child: Skeletonizer(
-                  enabled: false,
-                  child: CustomHorListView(widthOfSizedBbox: 13),
-                ),
+                child: CustomHorListView(widthOfSizedBbox: 13),
               ),
             ),
           ),
@@ -35,13 +33,7 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) =>
-                  Skeletonizer(enabled: false, child: VerticalCard()),
-              childCount: 10,
-            ),
-          ),
+          CustomVerListView(),
         ],
       ),
     );

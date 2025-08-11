@@ -42,6 +42,8 @@ class HomeRepoImplementation implements HomeRepo {
       BookModel bookModel = BookModel.fromJson(data);
       List<Item> books = bookModel.items ?? [];
 
+      print("Fetched ${books.length} featured books");
+
       return right(books);
     } catch (e) {
       if (e is DioException) {

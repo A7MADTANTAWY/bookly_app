@@ -1,6 +1,6 @@
 import 'package:bokly_app/core/utils/assets.dart';
 import 'package:bokly_app/features/home/presentation/views/widgets/action_button_details_view.dart';
-import 'package:bokly_app/features/home/presentation/views/widgets/horizontal_card.dart';
+import 'package:bokly_app/features/home/presentation/views/widgets/horizontal_card_success.dart';
 import 'package:flutter/material.dart';
 
 class BookSectionDetailsView extends StatelessWidget {
@@ -14,7 +14,7 @@ class BookSectionDetailsView extends StatelessWidget {
         const SizedBox(height: 15),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.32,
-          child: HorizontalCard(),
+          child: HorizontalCardSuccess(imageUrl: ''),
         ),
         const SizedBox(height: 10),
         const Text(

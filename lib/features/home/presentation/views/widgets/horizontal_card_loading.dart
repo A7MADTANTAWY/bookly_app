@@ -1,8 +1,8 @@
 import 'package:bokly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
-class HorizontalCard extends StatelessWidget {
-  const HorizontalCard({super.key});
+class HorizontalCardLoading extends StatelessWidget {
+  const HorizontalCardLoading({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,6 @@ class HorizontalCard extends StatelessWidget {
             fit: BoxFit.fill,
             image: AssetImage(AssetsData.testImage),
           ),
-          color: Colors.amber,
         ),
       ),
     );
