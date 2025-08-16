@@ -1,7 +1,6 @@
 import 'package:bokly_app/core/utils/assets.dart';
 import 'package:bokly_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -14,10 +13,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
     Future.delayed(Duration(seconds: 3), () {
-      Get.to(
-        () => const Home(),
-        transition: Transition.leftToRight,
-        duration: Duration(milliseconds: 400),
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const Home()),
       );
     });
     super.initState();

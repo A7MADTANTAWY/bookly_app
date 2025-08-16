@@ -1,23 +1,15 @@
 import 'package:bokly_app/core/utils/assets.dart';
-import 'package:bokly_app/features/home/presentation/views/book_details_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class VerticalCard extends StatelessWidget {
-  const VerticalCard({super.key});
+class VerticalCardLoading extends StatelessWidget {
+  const VerticalCardLoading({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
       child: GestureDetector(
-        onTap: () {
-          Get.to(
-            () => const BookDetailsView(),
-            transition: Transition.fade,
-            duration: Duration(milliseconds: 250),
-          );
-        },
+        onTap: () {},
         child: Row(
           children: [
             Container(
@@ -28,7 +20,6 @@ class VerticalCard extends StatelessWidget {
                   fit: BoxFit.fill,
                   image: AssetImage(AssetsData.testImage),
                 ),
-                color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
               ),
             ),

@@ -1,4 +1,4 @@
-import 'package:bokly_app/features/home/presentation/views/widgets/vertical_cards.dart';
+import 'package:bokly_app/features/home/presentation/views/widgets/vertical_cards_loading.dart';
 import 'package:bokly_app/features/search/presentation/views/widgets/custom_appBarr_search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
@@ -23,7 +23,7 @@ class SearchViewBody extends StatelessWidget {
         SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) =>
-                Skeletonizer(enabled: false, child: VerticalCard()),
+                Skeletonizer(enabled: false, child: VerticalCardLoading()),
             childCount: 10,
           ),
         ),

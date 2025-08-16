@@ -6,7 +6,6 @@ import 'package:bokly_app/features/home/presentation/bloc/newest_books_cubit/new
 import 'package:bokly_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -24,14 +23,16 @@ class BooklyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) =>
-              FeaturedBooksCubit(getIt.get<HomeRepoImplementation>())..fetchFeaturedBooks(),
+              FeaturedBooksCubit(getIt.get<HomeRepoImplementation>())
+                ..fetchFeaturedBooks(),
         ),
         BlocProvider(
           create: (context) =>
-              NewestBooksCubit(getIt.get<HomeRepoImplementation>()),
+              NewestBooksCubit(getIt.get<HomeRepoImplementation>())
+                ..fetchFeaturedBooks(),
         ),
       ],
-      child: GetMaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData.dark().copyWith(
