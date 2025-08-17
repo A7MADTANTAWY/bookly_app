@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- الصلاحية عشان التطبيق يعرف يخرج نت -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:usesCleartextTraffic="true"
         android:label="bookly_app"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -30,9 +34,7 @@
             android:value="2" />
     </application>
 
-    <!-- هنا بقى بتحط ال queries -->
     <queries>
-
         <intent>
             <action android:name="android.intent.action.VIEW" />
             <data android:scheme="https" />
