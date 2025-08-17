@@ -12,12 +12,20 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
 
   Future<void> fetchSimilarBooks({required String category}) async {
     emit(SimilarBooksLoading());
+
     final result = await homeRepo.fetchSimilarBooks(category: category);
-    if (isClosed) return; // ✅ cubit اتقفل خلاص، متعملش emit
+
     result.fold(
-      (failure) =>
-          emit(SimilarBooksFailure(errorMessage: failure.errorMessage)),
-      (books) => emit(SimilarBooksSuccess(books: books)),
+      (failure) {
+        if (!isClosed) {
+          emit(SimilarBooksFailure(errorMessage: failure.errorMessage));
+        }
+      },
+      (books) {
+        if (!isClosed) {
+          emit(SimilarBooksSuccess(books: books));
+        }
+      },
     );
   }
 }

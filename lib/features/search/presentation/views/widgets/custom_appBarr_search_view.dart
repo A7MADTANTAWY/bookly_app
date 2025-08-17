@@ -1,5 +1,7 @@
 import 'package:bokly_app/constants.dart';
+import 'package:bokly_app/features/search/presentation/bloc/search_cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomAppbarrSearchView extends StatelessWidget {
   const CustomAppbarrSearchView({super.key});
@@ -25,7 +27,10 @@ class CustomAppbarrSearchView extends StatelessWidget {
           color: kPrimaryColor,
           borderRadius: BorderRadius.circular(12),
         ),
-        child: const TextField(
+        child: TextField(
+          onSubmitted: (value) {
+            BlocProvider.of<SearchCubit>(context).searchBook(category: value);
+          },
           style: TextStyle(fontSize: 16, color: Colors.white),
           cursorColor: Colors.white,
           decoration: InputDecoration(
